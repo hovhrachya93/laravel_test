@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Company;
@@ -27,14 +28,16 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        $company = new Company();
-        $company->name = $request->input('name');
-        $company->email = $request->input('email');
         $filename = time() . str_replace([' ', ')', '('], '', $request->logo->getClientOriginalName());
         $path = Storage::disk('public')->putFileAs('company', $request->logo, $filename);
-        $company->logo = $path;
-        $company->website = $request->input('website');
-        $company->save();
+        $data = [
+            'name' => $request->name,
+            'email' => $request->email,
+            'logo' => $path,
+            'website' => $request->website,
+        ];
+
+        Company::create($data);
         return redirect()->route('companies.index');
     }
 
@@ -71,16 +74,17 @@ class CompanyController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $company = Company::findOrFail($id);
-        $company->name = $request->input('name');
-        $company->email = $request->input('email');
-        if ($request->hasFile('logo')) {
-            $filename = time() . str_replace([' ', ')', '('], '', $request->logo->getClientOriginalName());
-            $path = Storage::disk('public')->putFileAs('company', $request->logo, $filename);
-            $company->logo = $path;
-        }
-        $company->website = $request->input('website');
-        $company->update();
+        $filename = time() . str_replace([' ', ')', '('], '', $request->logo->getClientOriginalName());
+        $path = Storage::disk('public')->putFileAs('company', $request->logo, $filename);
+
+        $data = [
+            'name' => $request->name,
+            'email' => $request->email,
+            'logo' => $path,
+            'website' => $request->website,
+        ];
+
+        Company::whereId($id)->update($data);
         return redirect()->route('companies.index');
     }
 

@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e379c916-6016-40d1-a8dd-c1da397e5779" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CompanyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CompanyController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Employee.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Employee.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_05_075011_create_employees_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_05_075011_create_employees_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/companies.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/companies.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/employees.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/employeesOLD.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/inc/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/renameCompany.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/renameEmployee.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="e379c916-6016-40d1-a8dd-c1da397e5779" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -214,6 +202,7 @@
       <workItem from="1584550092981" duration="284000" />
       <workItem from="1584597289965" duration="164000" />
       <workItem from="1584625277663" duration="199000" />
+      <workItem from="1584634498677" duration="100000" />
     </task>
     <servers />
   </component>
@@ -252,10 +241,10 @@
     </state>
     <state x="502" y="298" key="NewPhpFileDialog/0.23.1440.804@0.23.1440.804" timestamp="1583694482718" />
     <state x="538" y="352" key="NewPhpFileDialog/0.23.1440.805@0.23.1440.805" timestamp="1583478108731" />
-    <state x="380" y="245" key="com.intellij.ide.util.TipDialog" timestamp="1584625282737">
+    <state x="380" y="245" key="com.intellij.ide.util.TipDialog" timestamp="1584634499027">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="380" y="245" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1584625282737" />
+    <state x="380" y="245" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1584634499027" />
     <state x="380" y="257" key="com.intellij.ide.util.TipDialog/0.23.1440.804@0.23.1440.804" timestamp="1584447423954" />
     <state x="380" y="258" key="com.intellij.ide.util.TipDialog/0.23.1440.805@0.23.1440.805" timestamp="1583473160341" />
     <state x="380" y="259" key="com.intellij.ide.util.TipDialog/0.23.1440.810@0.23.1440.810" timestamp="1583483371221" />

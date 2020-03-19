@@ -27,26 +27,16 @@ class EmployeeController extends Controller
      */
     public function store(Request $request)
     {
-        $employee = new Employee();
-        $employee->first_name = $request->input('first_name');
-        $employee->last_name = $request->input('last_name');
-        $employee->company = $request->input('company');
-        $employee->email = $request->input('email');
-        $employee->phone = $request->input('phone');
-        $employee->save();
-        return redirect()->route('employees.index');
-    }
+        $employeesData = [
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'company' => $request->email,
+            'email' => $request->email,
+            'phone' => $request->phone,
+        ];
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        $employee = new Employee();
-        return view('employees.edit', ['employee' => $employee->find($id)]);
+        Employee::create($employeesData);
+        return redirect()->route('employees.index');
     }
 
     /**
@@ -70,14 +60,16 @@ class EmployeeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $employee = Employee::find($id);
-        $employee->first_name = $request->input('first_name');
-        $employee->last_name = $request->input('last_name');
-        $employee->company = $request->input('company');
-        $employee->email = $request->input('email');
-        $employee->phone = $request->input('phone');
-        $employee->save();
+        $date = [
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'company' => $request->company,
+            'email' => $request->email,
+            'phone' => $request->phone,
+        ];
+        Employee::whereId($id)->update($date);
         return redirect()->route('employees.index');
+
     }
 
     /**
@@ -89,6 +81,6 @@ class EmployeeController extends Controller
     public function destroy($id)
     {
         Employee::find($id)->delete();
-           return redirect()->route('employees.store');
+           return redirect()->route('employees.index');
     }
 }
