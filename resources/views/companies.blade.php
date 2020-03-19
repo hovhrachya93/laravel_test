@@ -20,17 +20,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td><img src="https://cdn.shopify.com/shopifycloud/hatchful-web/assets/6fcc76cfd1c59f44d43a485167fb3139.png" alt="Smiley face" height="42" width="42">
-            </td>
-            <td>tom44@mdo</td>
-            <td><button class="btn btn-warning">rename</button></td>
-            <td><button class="btn btn-danger">delete</button></td>
-        </tr>
-        @foreach($data as $company)
+        @foreach($companies as $company)
             <tr>
                 <th scope="row">{{$company->id}}</th>
                 <td> {{$company->name}} </td>
@@ -58,7 +48,7 @@
         </tbody>
     </table>
     <ul class="pagination">
-        {{ $data->links() }}
+        {{ $companies->links() }}
     </ul>
 
     @if($errors->any())

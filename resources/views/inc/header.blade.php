@@ -2,8 +2,8 @@
     <h5 class="my-0 mr-md-auto font-weight-normal">Cretix test</h5>
     <nav class="my-2 my-md-0 mr-md-3">
         <a class="p-2 text-dark" href="{{url('/home')}}">Main</a>
-        <a class="p-2 text-dark" href="{{url('/companies')}}">Companies</a>
-        <a class="p-2 text-dark" href="{{url('/employees')}}">Employees</a>
+        <a class="p-2 text-dark" href="{{route('companies.store')}}">Companies</a>
+        <a class="p-2 text-dark" href="{{route('employees.store')}}">Employees</a>
     </nav>
     <a class="btn btn-outline-primary" href="{{url('/logout')}}">Log out</a>
 </div>

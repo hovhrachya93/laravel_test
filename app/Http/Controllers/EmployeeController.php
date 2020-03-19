@@ -2,58 +2,93 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\EmployeeRequest;
 use App\Models\Employee;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class EmployeeController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-    public function submit(EmployeeRequest $req)
-    {
-        $employee = new Employee();
-        $employee->first_name = $req->input('first_name');
-        $employee->last_name = $req->input('last_name');
-        $employee->company = $req->input('company');
-        $employee->email = $req->input('email');
-        $employee->phone = $req->input('phone');
-        $employee->save();
-        return redirect()->route('employees');
-    }
-
-    public function getData()
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
     {
         $employee = DB::table('employees')->paginate(2);
         $companies = DB::table('companies')->get();
-        return view('employees', ['employers' => $employee, 'companies' => $companies]);
+        return view('employees.index', ['employers' => $employee, 'companies' => $companies]);
     }
-
-    public function rename($id)
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
     {
         $employee = new Employee();
-        return view('renameEmployee', ['data' => $employee->find($id)]);
+        $employee->first_name = $request->input('first_name');
+        $employee->last_name = $request->input('last_name');
+        $employee->company = $request->input('company');
+        $employee->email = $request->input('email');
+        $employee->phone = $request->input('phone');
+        $employee->save();
+        return redirect()->route('employees.index');
     }
 
-    public function update($id, EmployeeRequest $req)
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $employee = new Employee();
+        return view('employees.edit', ['employee' => $employee->find($id)]);
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        $employee = new Employee();
+        return view('employees.edit', ['employee' => $employee->find($id)]);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
     {
         $employee = Employee::find($id);
-        $employee->first_name = $req->input('first_name');
-        $employee->last_name = $req->input('last_name');
-        $employee->company = $req->input('company');
-        $employee->email = $req->input('email');
-        $employee->phone = $req->input('phone');
+        $employee->first_name = $request->input('first_name');
+        $employee->last_name = $request->input('last_name');
+        $employee->company = $request->input('company');
+        $employee->email = $request->input('email');
+        $employee->phone = $request->input('phone');
         $employee->save();
-        return redirect()->route('employees');
+        return redirect()->route('employees.index');
     }
 
-    public function delete($id)
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
     {
         Employee::find($id)->delete();
-        return redirect()->route('employees');
+           return redirect()->route('employees.store');
     }
-
 }

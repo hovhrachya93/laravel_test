@@ -4,9 +4,14 @@
     <list default="true" id="e379c916-6016-40d1-a8dd-c1da397e5779" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CompanyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CompanyController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Employee.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Employee.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_05_075011_create_employees_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_05_075011_create_employees_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/companies.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/companies.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/employees.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/employees.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/employees.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/employeesOLD.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inc/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/renameCompany.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/renameEmployee.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -132,11 +137,17 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/employees" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/employees" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views" />
+      <recent name="$PROJECT_DIR$/resources/views/employees" />
+      <recent name="$PROJECT_DIR$/resources/views/companies" />
       <recent name="$PROJECT_DIR$/app/Models" />
     </key>
   </component>
@@ -181,6 +192,28 @@
       <workItem from="1583842281047" duration="337000" />
       <workItem from="1583866838977" duration="261000" />
       <workItem from="1583867345134" duration="2300000" />
+      <workItem from="1584380183903" duration="170000" />
+      <workItem from="1584383878337" duration="1654000" />
+      <workItem from="1584385710391" duration="1678000" />
+      <workItem from="1584387839881" duration="634000" />
+      <workItem from="1584391101770" duration="840000" />
+      <workItem from="1584428540050" duration="579000" />
+      <workItem from="1584430920785" duration="759000" />
+      <workItem from="1584432769457" duration="812000" />
+      <workItem from="1584436307978" duration="1497000" />
+      <workItem from="1584438216406" duration="27000" />
+      <workItem from="1584438934775" duration="1093000" />
+      <workItem from="1584441402616" duration="752000" />
+      <workItem from="1584447421918" duration="252000" />
+      <workItem from="1584475346329" duration="36000" />
+      <workItem from="1584511116086" duration="1727000" />
+      <workItem from="1584513091400" duration="1068000" />
+      <workItem from="1584515444564" duration="1377000" />
+      <workItem from="1584517709071" duration="334000" />
+      <workItem from="1584520678356" duration="326000" />
+      <workItem from="1584550092981" duration="284000" />
+      <workItem from="1584597289965" duration="164000" />
+      <workItem from="1584625277663" duration="199000" />
     </task>
     <servers />
   </component>
@@ -188,13 +221,15 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="277" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1583691414797">
-      <screen x="0" y="23" width="1440" height="804" />
+    <state x="277" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584511686162">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="277" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.900@0.0.1440.900" timestamp="1584511686162" />
     <state x="277" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.804@0.23.1440.804" timestamp="1583691414797" />
-    <state x="458" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1583689955812">
-      <screen x="0" y="23" width="1440" height="804" />
+    <state x="458" y="184" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1584512230775">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="458" y="184" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1584512230775" />
     <state x="458" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.804@0.23.1440.804" timestamp="1583689955812" />
     <state width="1398" height="188" key="GridCell.Tab.0.bottom" timestamp="1583396573036">
       <screen x="0" y="23" width="1440" height="805" />
@@ -217,13 +252,14 @@
     </state>
     <state x="502" y="298" key="NewPhpFileDialog/0.23.1440.804@0.23.1440.804" timestamp="1583694482718" />
     <state x="538" y="352" key="NewPhpFileDialog/0.23.1440.805@0.23.1440.805" timestamp="1583478108731" />
-    <state x="380" y="257" key="com.intellij.ide.util.TipDialog" timestamp="1583867379148">
-      <screen x="0" y="23" width="1440" height="804" />
+    <state x="380" y="245" key="com.intellij.ide.util.TipDialog" timestamp="1584625282737">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="380" y="262" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1583780229805" />
-    <state x="380" y="257" key="com.intellij.ide.util.TipDialog/0.23.1440.804@0.23.1440.804" timestamp="1583867379148" />
+    <state x="380" y="245" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1584625282737" />
+    <state x="380" y="257" key="com.intellij.ide.util.TipDialog/0.23.1440.804@0.23.1440.804" timestamp="1584447423954" />
     <state x="380" y="258" key="com.intellij.ide.util.TipDialog/0.23.1440.805@0.23.1440.805" timestamp="1583473160341" />
     <state x="380" y="259" key="com.intellij.ide.util.TipDialog/0.23.1440.810@0.23.1440.810" timestamp="1583483371221" />
+    <state x="507" y="331" key="com.intellij.ide.util.TipDialog/259.1103.1440.804/0.23.1920.1057@0.23.1920.1057" timestamp="1584383885640" />
     <state x="368" y="39" width="703" height="777" key="find.popup" timestamp="1583492243444">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
