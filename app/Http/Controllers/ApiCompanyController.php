@@ -28,16 +28,16 @@ class ApiCompanyController extends Controller
      */
     public function store(Request $request)
     {
-        $filename = time() . str_replace([' ', ')', '('], '', $request->logo->getClientOriginalName());
-        $path = Storage::disk('public')->putFileAs('company', $request->logo, $filename);
-        $data = [
-            'name' => $request->name,
-            'email' => $request->email,
-            'logo' => $path,
-            'website' => $request->website,
-        ];
+        // $filename = time() . str_replace([' ', ')', '('], '', $request->logo->getClientOriginalName());
+        // $path = Storage::disk('public')->putFileAs('company', $request->logo, $filename);
+        // $data = [
+        //     'name' => $request->name,
+        //     'email' => $request->email,
+        //     'logo' => $path,
+        //     'website' => $request->website,
+        // ];
 
-        $CompaniesData = Company::create($data);
+        $CompaniesData = Company::create($request->all());
         response()->json($CompaniesData, 201);
         }
 

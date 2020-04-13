@@ -29,7 +29,7 @@ class ApiEmployeeController extends Controller
         $employeesData = [
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
-            'company' => $request->email,
+            'company' => $request->company,
             'email' => $request->email,
             'phone' => $request->phone,
         ];
